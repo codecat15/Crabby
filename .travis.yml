@@ -2,7 +2,7 @@ os: osx
 osx_image: xcode11.3
 language: swift
 
-xcode_project: Crabby/Crabby.xcodeproj
+xcode_project: Crabby.xcodeproj
 xcode_scheme: Crabby
 xcode_sdk: iphonesimulator13.2
 xcode_destination: platform=iOS Simulator,OS=13.2,name=iPhone X
