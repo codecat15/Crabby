@@ -262,4 +262,42 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertTrue(result == "*#^$#(*$&@#( hello this is an amazing string")
     }
 
+    // MARK: contains number
+
+    func test_containsNumber_WithRegularString_RetrusnFalse(){
+
+        //ARRANGE
+        let value = "Hello World"
+
+        //ACT
+        let result = value.containsNumber()
+
+        //ASSERT
+        XCTAssertFalse(result)
+    }
+
+    func test_containsNumber_WithSpecialCharacterString_RetrusnFalse(){
+
+        //ARRANGE
+        let value = "Hello World!#&)($%@@!!"
+
+        //ACT
+        let result = value.containsNumber()
+
+        //ASSERT
+        XCTAssertFalse(result)
+    }
+
+    func test_containsNumber_WithNumericString_RetrusnTrue(){
+
+        //ARRANGE
+        let value = "Hello 15"
+
+        //ACT
+        let result = value.containsNumber()
+
+        //ASSERT
+        XCTAssertTrue(result)
+    }
+
 }

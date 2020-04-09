@@ -86,4 +86,10 @@ public extension String
         }
         return String(data: data, encoding: .utf8)
     }
+
+    /// Verifies if the given string contains number
+    func containsNumber() -> Bool{
+        let numbersRange = self.rangeOfCharacter(from: .decimalDigits)
+        return numbersRange != nil
+    }
 }
